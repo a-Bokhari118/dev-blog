@@ -13,7 +13,7 @@ const Header = () => {
         <nav className="flex flex-wrap md:w-4/5 items-center justify-end text-base md:ml-auto">
           <Link href="/blog">
             <a className="mx-5 cursor-pointer uppercase hover:text-indigo-300">
-              Blgo
+              blog
             </a>
           </Link>
           <Link href="/about">
