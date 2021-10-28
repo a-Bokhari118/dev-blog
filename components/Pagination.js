@@ -8,7 +8,7 @@ const Pagination = ({ currentPage, numPages }) => {
   if (numPages === 1) return <></>;
 
   return (
-    <div className="mt-6">
+    <div className="mt-6 px-4">
       <ul className="flex pl-0 list-none mt-2">
         {!isFirst && (
           <Link href={prevPage}>
