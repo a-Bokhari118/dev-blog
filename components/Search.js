@@ -5,12 +5,11 @@ import SearchResults from './SearchResults';
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [debouncedValue] = useDebounce(searchTerm, 500);
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
     const getResults = async () => {
-      if (debouncedValue === '') {
+      if (searchTerm === '') {
         setSearchResults([]);
       } else {
         const res = await fetch(`/api/search?q=${searchTerm}`);
@@ -19,7 +18,7 @@ const Search = () => {
       }
     };
     getResults();
-  }, [searchTerm, debouncedValue]);
+  }, [searchTerm]);
   return (
     <div className="relative bg-gray-600 p-4">
       <div className="container mx-auto flex items-center justify-center md:justify-end">
